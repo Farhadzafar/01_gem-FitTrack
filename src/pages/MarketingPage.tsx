@@ -1,37 +1,49 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Dumbbell, Heart, Target, Trophy, Users, BarChart, Shield,
-  Clock, Zap, Smartphone, Brain
-} from 'lucide-react';
-import { TrainingCard } from '../components/marketing/TrainingCard';
-import { Footer } from '../components/marketing/Footer';
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  Dumbbell,
+  Heart,
+  Target,
+  Trophy,
+  Users,
+  BarChart,
+  Shield,
+  Clock,
+  Zap,
+  Smartphone,
+  Brain,
+} from "lucide-react";
+import { TrainingCard } from "../components/marketing/TrainingCard";
+import { Footer } from "../components/marketing/Footer";
 
 const featuredTrainings = [
   {
-    id: 'hiit-cardio',
-    title: 'HIIT Cardio Blast',
-    description: 'High-intensity interval training to maximize calorie burn',
-    duration: '30 min',
-    calories: '400',
-    imageUrl: 'https://images.unsplash.com/photo-1434596922112-19c563067271?auto=format&fit=crop&q=80&w=2070'
+    id: "hiit-cardio",
+    title: "HIIT Cardio Blast",
+    description: "High-intensity interval training to maximize calorie burn",
+    duration: "30 min",
+    calories: "400",
+    imageUrl:
+      "https://images.unsplash.com/photo-1434596922112-19c563067271?auto=format&fit=crop&q=80&w=2070",
   },
   {
-    id: 'yoga-flow',
-    title: 'Mindful Yoga Flow',
-    description: 'Connect mind and body with flowing movements',
-    duration: '45 min',
-    calories: '200',
-    imageUrl: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=2070'
+    id: "yoga-flow",
+    title: "Mindful Yoga Flow",
+    description: "Connect mind and body with flowing movements",
+    duration: "45 min",
+    calories: "200",
+    imageUrl:
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=2070",
   },
   {
-    id: 'strength-core',
-    title: 'Core Strength',
-    description: 'Build a strong foundation with targeted core exercises',
-    duration: '25 min',
-    calories: '300',
-    imageUrl: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&q=80&w=2070'
-  }
+    id: "strength-core",
+    title: "Core Strength",
+    description: "Build a strong foundation with targeted core exercises",
+    duration: "25 min",
+    calories: "300",
+    imageUrl:
+      "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&q=80&w=2070",
+  },
 ];
 
 export function MarketingPage() {
@@ -48,10 +60,14 @@ export function MarketingPage() {
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Transform Your Fitness Journey</h1>
-            <p className="text-xl md:text-2xl mb-8">Track, analyze, and achieve your fitness goals with FitTrack</p>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Transform Your Fitness Journey
+            </h1>
+            <p className="text-xl md:text-2xl mb-8">
+              Track, analyze, and achieve your fitness goals with FitTrack
+            </p>
             <Link
-              to="/dashboard"
+              to="/trainings"
               className="inline-block bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors"
             >
               Get Started
@@ -75,7 +91,9 @@ export function MarketingPage() {
       {/* Features Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Why Choose FitTrack?</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Why Choose FitTrack?
+          </h2>
           <div className="grid md:grid-cols-4 gap-8">
             <FeatureCard
               icon={<BarChart className="h-8 w-8" />}
@@ -104,7 +122,9 @@ export function MarketingPage() {
       {/* Featured Trainings */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Featured Workouts</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Featured Workouts
+          </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {featuredTrainings.map((training) => (
               <TrainingCard key={training.id} {...training} />
@@ -145,8 +165,13 @@ export function MarketingPage() {
       {/* CTA Section */}
       <section className="py-20 bg-indigo-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Fitness Journey?</h2>
-          <p className="text-xl opacity-90 mb-8">Join thousands of users who have achieved their fitness goals with FitTrack</p>
+          <h2 className="text-3xl font-bold mb-6">
+            Ready to Transform Your Fitness Journey?
+          </h2>
+          <p className="text-xl opacity-90 mb-8">
+            Join thousands of users who have achieved their fitness goals with
+            FitTrack
+          </p>
           <Link
             to="/dashboard"
             className="inline-block bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors"
@@ -161,7 +186,15 @@ export function MarketingPage() {
   );
 }
 
-function FeatureCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
+function FeatureCard({
+  icon,
+  title,
+  description,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}) {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md text-center">
       <div className="inline-block p-3 bg-indigo-100 text-indigo-600 rounded-lg mb-4">
@@ -173,12 +206,18 @@ function FeatureCard({ icon, title, description }: { icon: React.ReactNode; titl
   );
 }
 
-function BenefitCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
+function BenefitCard({
+  icon,
+  title,
+  description,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}) {
   return (
     <div className="flex items-start space-x-4">
-      <div className="p-2 bg-indigo-100 text-indigo-600 rounded-lg">
-        {icon}
-      </div>
+      <div className="p-2 bg-indigo-100 text-indigo-600 rounded-lg">{icon}</div>
       <div>
         <h3 className="font-semibold mb-1">{title}</h3>
         <p className="text-gray-600 text-sm">{description}</p>
